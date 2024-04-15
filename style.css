@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  height: 100vh;
+}
+.list {
+  display: none;
+}
+.title-quiz {
+  font-size: 5em;
+  text-shadow: 0 0 15px rgb(119, 249, 112);
+}
+
+@media (max-width: 768px) {
+  .title-quiz {
+    font-size: 3rem;
+  }
+}
