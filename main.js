@@ -38,7 +38,7 @@ const questionData = [
         question: "What was the first soft drink in space?",
         option: ["Coca Cola", "Fanta", "Sprite"],
         answer: "Coca Cola"
-    },,
+    },
     {
         question: "Which country invented ice cream?",
         option: ["France", "China", "Italy"],
@@ -60,18 +60,18 @@ const questionData = [
         answer: "New York City"
     }
 ]
-
 let data = Array(5);
 let i = 0, score = 0;
 
 function createRandomQuestion(data) {
     let j = 0;
     while (j < data.length) {
-        let val = Math.floor(Math.random() * 13);
+        let val = Math.floor(Math.random() * 12);
         if (!(data.slice(0, j)).includes(val)) {
             data[j] = val;
             j++;
         }
+        console.log(data);
     }
     return data.map(i => questionData[i]);
 }
@@ -115,6 +115,9 @@ const nextQuestion = () => {
 
 document.querySelector(".btn-start").addEventListener("click", () => { 
     data = createRandomQuestion(data);
+
+    console.log(data);
+
     document.querySelector(".menu").style.display = "none";
     document.querySelector(".list").style.display = "block";
     displayQuestion();
